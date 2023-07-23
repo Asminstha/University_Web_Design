@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    <link id="theme-style" rel="stylesheet" href="day.css">
+
+    <script src="https://kit.fontawesome.com/f395046c99.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="./images/logo_nav-transformedd.png" alt=""></a>
+            <!-- Day/Night mode switch button -->
+            <div class="switch-btn" onclick="toggleMode()">
+                <i class="fas fa-sun" id="day-icon"></i>
+                <i class="fas fa-moon" id="night-icon"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <!-- For Side menu in small screen (crossbar)   "adding onclick function to show and hide the menu" -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- For Side menu in small screen (crossbar) -->
+            <i class="fa fa-graduation-cap fa-beat fa-xs" style="color: #14a8e2;" onclick="showMenu()"></i>
+        </nav>
+        <!-- ---------------Contact US-------- -->
+        <h1>Contact Us</h1>
+        <section class="location">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31397712412!2d85.3261328!3d27.708960349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1690037230414!5m2!1sen!2snp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i> <span>
+                            <h5>Suruchi Marg, Abc Building</h5>
+                            <p>New Baneshwor, Kathmandu</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i> <span>
+                            <h5>+977 9861362710</h5>
+                            <p>Sunday To Friday</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i> <span>
+                            <h5>asmin.sth135@gmail.com</h5>
+                            <p>Email Us Your Query</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    <form action="formhandle.php" method="post">
+                        <input type="text" name="name" placeholder="Enter Your Name " required>
+                        <input type="email" name="email" placeholder="Enter Your Email" required>
+                        <input type="text" name="subject" placeholder="Enter Your Subject" required>
+                        <textarea rows="10" name="message" placeholder="Message" required></textarea>
+                        <button type="submit" class="h-btn1">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- ----------Footer--------- -->
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores quibusdam totam excepturi
+                commodi,<br> cumque saepe laboriosam modi repellendus Non?</p>
+            <div class="icons">
+                <a href=""><i class="fa fa-facebook fa-beat"></i></a>
+                <a href=""> <i class="fa fa-twitter fa-beat"></i></a>
+                <a href=""> <i class="fa fa-linkedin fa-beat"></i></a>
+                <a href=""> <i class="fa fa-instagram fa-beat"></i></a>
+            </div>
+            <p>Made by <i class="fa-solid fa-a fa-flip"></i>smin Shrestha </p>
+        </section>
+
+        <!-- JS code for Toggle menu -->
+        <script>
+            var navLinks = document.getElementById("navLinks");  /*creating variable*/
+            function showMenu() {          /*creating function to change the value of style "right"*/
+                navLinks.style.right = "0";                     /*for showing the menu*/
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";  /*for hiding the menu*/
+            }
+
+            var navLinks = document.getElementById("navLinks");
+            var themeStyle = document.getElementById("theme-style");
+            var dayIcon = document.getElementById("day-icon");
+            var nightIcon = document.getElementById("night-icon");
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+
+            function toggleMode() {
+                // Toggle day and night mode by swapping the CSS file
+                if (themeStyle.getAttribute("href") === "day.css") {
+                    themeStyle.setAttribute("href", "night.css");
+                    dayIcon.style.animation = "slideOutDay 0.3s forwards"; // Apply slide-out animation to day icon
+
+                    // Reset night icon animation properties after animation is complete
+                    nightIcon.style.animation = "slideInNight 0.3s forwards";
+                    setTimeout(() => {
+                        dayIcon.style.display = "none"; // Hide day icon after animation is complete
+                        nightIcon.style.display = "inline-block";
+                        dayIcon.style.animation = ""; // Reset animation properties
+                    }, 300);
+                } else {
+                    themeStyle.setAttribute("href", "day.css");
+                    nightIcon.style.animation = "slideOutNight 0.3s forwards"; // Apply slide-out animation to night icon
+
+                    // Reset day icon animation properties after animation is complete
+                    dayIcon.style.animation = "slideInDay 0.3s forwards";
+                    setTimeout(() => {
+                        nightIcon.style.display = "none"; // Hide night icon after animation is complete
+                        dayIcon.style.display = "inline-block";
+                        nightIcon.style.animation = ""; // Reset animation properties
+                    }, 300);
+                }
+            }
+
+
+        </script>
+        <script src="theme.js"></script>
+</body>
+
+</html>

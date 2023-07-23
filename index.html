@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    <link id="theme-style" rel="stylesheet" href="day.css">
+
+ <script src="https://kit.fontawesome.com/f395046c99.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header">
+<nav>
+    <a href="index.html"><img src="./images/logo_nav-transformedd.png" alt=""></a>
+    <!-- Day/Night mode switch button -->
+    <div class="switch-btn" onclick="toggleMode()">
+        <i class="fas fa-sun" id="day-icon"></i>
+        <i class="fas fa-moon" id="night-icon"></i>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <!-- For Side menu in small screen (crossbar)   "adding onclick function to show and hide the menu" -->
+        <i class="fa fa-times" onclick="hideMenu()"></i>   
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="course.html">COURSE</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    <!-- For Side menu in small screen (crossbar) -->
+    <i class="fa fa-graduation-cap fa-beat fa-xs" style="color: #14a8e2;" onclick="showMenu()"></i>
+</nav>
+<div class="text-box">
+    <h1>World's Biggest University</h1>
+    <p>Making Websites are now one of the easiest thing in the world. You just need to learn HTML, CSS, <br> Javascript and you are good to go.</p>
+    <a href="" class="h-btn">Visit Us TO Know More!!</a>
+</div>
+    </section>
+<!-- ----------Course------------ -->
+<section class="course">
+    <h1>Courses we Offer</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <div class="row">
+        <div class="course-column">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores exercitationem, ratione officiis dignissimos, molestiae perferendis in sed fugiat quaerat aut assumenda. Impedit adipisci debitis placeat unde quidem labore, minima alias!</p>
+        </div>
+        <div class="course-column">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores exercitationem, ratione officiis dignissimos, molestiae perferendis in sed fugiat quaerat aut assumenda. Impedit adipisci debitis placeat unde quidem labore, minima alias!</p>
+        </div>
+        <div class="course-column">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores exercitationem, ratione officiis dignissimos, molestiae perferendis in sed fugiat quaerat aut assumenda. Impedit adipisci debitis placeat unde quidem labore, minima alias!</p>
+        </div>
+        
+    </div>
+
+</section>
+<!-- ---------------Campus------------------ -->
+<section class="campus">
+<h1>Our Campus</h1>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inciduntquibusdam. Dicta, quisquam. Tempora, minus.</p>
+<div class="row">
+    <div class="campus-column">
+        <img src="./images/girl1.avif" alt="">
+        <div class="layer">
+            <h3>Place Name</h3>
+        </div>
+    </div>
+    <div class="campus-column">
+        <img src="./images/group2.avif" alt="">
+        <div class="layer">
+            <h3>Place Name</h3>
+        </div>
+    </div>
+    <div class="campus-column">
+        <img src="./images/online-communication_1098-15842.avif" alt="">
+        <div class="layer">
+            <h3>Place Name</h3>
+        </div>
+    </div>
+</div>
+</section>
+<!-- ---------------Facilities-------- -->
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. quam quasi deleniti magnam ea enim veniam.</p>
+    <div class="row">
+        <div class="facilities-col">
+            <img src="./images/library.jpg" alt="">
+            <h3>World Class Library</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat in fuga minima? Inventore quas eligendi natus saepe eos fuga aliquid debitis praesentium, atque nesciunt itaque alias, quo quae non voluptate?</p>
+        </div>
+        <div class="facilities-col">
+            <img src="./images/cafeteria.avif" alt="">
+            <h3>Healthy And Tasty Food</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat in fuga minima? Inventore quas eligendi natus saepe eos fuga aliquid debitis praesentium, atque nesciunt itaque alias, quo quae non voluptate?</p>
+        </div>
+        <div class="facilities-col">
+            <img src="./images/playground.jpg" alt="">
+            <h3>Largest Play Ground</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat in fuga minima? Inventore quas eligendi natus saepe eos fuga aliquid debitis praesentium, atque nesciunt itaque alias, quo quae non voluptate?</p>
+        </div>
+    </div>
+</section>
+
+<!-- ---------Testimonials------------ -->
+<section class="testimonials">
+    <h1>What Our Students Says</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aincidunt?</p>
+    <div class="row">
+        <div class="testimonials-col">
+            <img src="./images/front-view-female-student-black-jacket-wearing-backpack-holding-pen-copybook-blue-wall-college-university-lessons_140725-43363.avif" alt="">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque magnam error ratione beatae, soluta suscipit consequuntur aspernatur, ipsa sunt atque voluptate laboriosam tempora doloribus sapiente explicabo fugit esse. Vel, nemo.</p>
+                <h3>Students Name </h3>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-regular fa-star-half-stroke fa-beat"></i>
+                
+            </div>
+        </div>
+        <div class="testimonials-col">
+            <img src="./images/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall_140725-42637.avif" alt="">
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque magnam error ratione beatae, soluta suscipit consequuntur aspernatur, ipsa sunt atque voluptate laboriosam tempora doloribus sapiente explicabo fugit esse. Vel, nemo.</p>
+                <h3>Students Name </h3>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-solid fa-star fa-beat"></i>
+                <i class="fa-regular fa-star fa-beat"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- --------------Call to Action----------- -->
+<section class="cta">
+    <h1>Enroll For Our Various Online Courses <br> Anywhere From the World</h1>
+    <a href="" class="h-btn">Contact US </a>
+</section>
+<!-- ----------Footer--------- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores quibusdam totam excepturi commodi,<br> cumque saepe laboriosam modi repellendus  Non?</p>
+    <div class="icons">
+        <a href=""><i class="fa fa-facebook fa-beat"></i></a>
+       <a href=""> <i class="fa fa-twitter fa-beat"></i></a>
+       <a href=""> <i class="fa fa-linkedin fa-beat"></i></a>
+       <a href=""> <i class="fa fa-instagram fa-beat"></i></a>
+    </div>
+<p>Made by <i class="fa-solid fa-a fa-flip"></i>smin Shrestha </p>
+</section>
+
+    <!-- JS code for Toggle menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");  /*creating variable*/
+        function showMenu(){          /*creating function to change the value of style "right"*/
+            navLinks.style.right ="0";                     /*for showing the menu*/
+        }
+        function hideMenu(){
+            navLinks.style.right ="-200px";  /*for hiding the menu*/
+        }
+       
+        var navLinks = document.getElementById("navLinks");
+        var themeStyle = document.getElementById("theme-style");
+        var dayIcon = document.getElementById("day-icon");
+        var nightIcon = document.getElementById("night-icon");
+
+        function showMenu(){
+            navLinks.style.right ="0";
+        }
+        
+        function hideMenu(){
+            navLinks.style.right ="-200px";
+        }
+        
+        function toggleMode() {
+  // Toggle day and night mode by swapping the CSS file
+  if (themeStyle.getAttribute("href") === "day.css") {
+    themeStyle.setAttribute("href", "night.css");
+    dayIcon.style.animation = "slideOutDay 0.3s forwards"; // Apply slide-out animation to day icon
+
+    // Reset night icon animation properties after animation is complete
+    nightIcon.style.animation = "slideInNight 0.3s forwards";
+    setTimeout(() => {
+      dayIcon.style.display = "none"; // Hide day icon after animation is complete
+      nightIcon.style.display = "inline-block";
+      dayIcon.style.animation = ""; // Reset animation properties
+    }, 300);
+  } else {
+    themeStyle.setAttribute("href", "day.css");
+    nightIcon.style.animation = "slideOutNight 0.3s forwards"; // Apply slide-out animation to night icon
+
+    // Reset day icon animation properties after animation is complete
+    dayIcon.style.animation = "slideInDay 0.3s forwards";
+    setTimeout(() => {
+      nightIcon.style.display = "none"; // Hide night icon after animation is complete
+      dayIcon.style.display = "inline-block";
+      nightIcon.style.animation = ""; // Reset animation properties
+    }, 300);
+  }
+}   
+    </script>
+    <script src="theme.js"></script>
+</body>
+</html>

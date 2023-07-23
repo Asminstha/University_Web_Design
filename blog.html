@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+  <link id="theme-style" rel="stylesheet" href="day.css">
+
+ <script src="https://kit.fontawesome.com/f395046c99.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="./images/logo_nav-transformedd.png" alt=""></a>
+            <!-- Day/Night mode switch button -->
+            <div class="switch-btn" onclick="toggleMode()">
+                <i class="fas fa-sun" id="day-icon"></i>
+                <i class="fas fa-moon" id="night-icon"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <!-- For Side menu in small screen (crossbar)   "adding onclick function to show and hide the menu" -->
+                <i class="fa fa-times" onclick="hideMenu()"></i>   
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- For Side menu in small screen (crossbar) -->
+            <i class="fa fa-graduation-cap fa-beat fa-xs" style="color: #14a8e2;" onclick="showMenu()"></i>
+        </nav>
+<h1>Our Certificate and Online Programs 2023</h1>
+
+    </section>
+    <!-- ---------------Blog Page content----------- -->
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="./images/online-communication_1098-15842.avif" alt="">
+                <h3>Our Certificate and Online Programs 2023 </h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, maiores aspernatur impedit non dolores, quod quo nisi deleniti laborum ipsum itaque excepturi neque odit quos amet quibusdam accusamus accusantium fugiat!</p> <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab rem quibusdam maxime dolorum delectus numquam quasi? Corrupti repellendus optio explicabo, facere iure excepturi asperiores tempore eos, Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia omnis, nemo autem labore, nesciunt maxime explicabo hic sunt mollitia at, est earum vitae expedita esse. Ducimus delectus officia recusandae! mollitia molestias consequuntur. Temporibus?</p> <br><br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus voluptatibus atque autem, amet cum nihil facilis! Nemo, consectetur. Eveniet qui sequi debitis necessitatibus obcaecati aliquid esse sunt nihil deleniti alias.</p>
+                <div class="comment-box"> 
+                    <h3>Leave a Comment</h3>
+                    <form action="" class="comment-form">
+                        <input type="text"  id="name" placeholder="Enter Your Name">
+                        <input type="email"placeholder="Enter Your Email">
+                        <textarea name="" id="" rows="5" placeholder="Enter Your Comment"></textarea>
+                        <button type="submit" class="h-btn1">Post Your Comment</button>
+                    </form>
+                </div>
+            </div>
+            <div class="blog-right">
+                <h3>Post Categories</h3>
+                <div>
+                    <span>Computer Science</span>
+                    <span>20</span>
+                </div>
+                <div>
+                    <span>Busines Studies</span>
+                    <span>10</span>
+                </div>
+                <div>
+                    <span>Computer System</span>
+                    <span>30</span>
+                </div>
+                <div>
+                    <span>Data Science</span>
+                    <span>26</span>
+                </div>
+                <div>
+                    <span>Machine learning</span>
+                    <span>20</span>
+                </div>
+                <div>
+                    <span>Data Analyst</span>
+                    <span>45</span>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+<!-- ----------Footer--------- -->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores quibusdam totam excepturi commodi,<br> cumque saepe laboriosam modi repellendus  Non?</p>
+    <div class="icons">
+        <a href=""><i class="fa fa-facebook fa-beat"></i></a>
+       <a href=""> <i class="fa fa-twitter fa-beat"></i></a>
+       <a href=""> <i class="fa fa-linkedin fa-beat"></i></a>
+       <a href=""> <i class="fa fa-instagram fa-beat"></i></a>
+    </div>
+<p>Made by <i class="fa-solid fa-a fa-flip"></i>smin Shrestha </p>
+</section>
+
+    <!-- JS code for Toggle menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");  /*creating variable*/
+        function showMenu(){          /*creating function to change the value of style "right"*/
+            navLinks.style.right ="0";                     /*for showing the menu*/
+        }
+        function hideMenu(){
+            navLinks.style.right ="-200px";  /*for hiding the menu*/
+        }
+       
+        var navLinks = document.getElementById("navLinks");
+        var themeStyle = document.getElementById("theme-style");
+        var dayIcon = document.getElementById("day-icon");
+        var nightIcon = document.getElementById("night-icon");
+
+        function showMenu(){
+            navLinks.style.right ="0";
+        }
+        
+        function hideMenu(){
+            navLinks.style.right ="-200px";
+        }
+        
+        function toggleMode() {
+  // Toggle day and night mode by swapping the CSS file
+  if (themeStyle.getAttribute("href") === "day.css") {
+    themeStyle.setAttribute("href", "night.css");
+    dayIcon.style.animation = "slideOutDay 0.3s forwards"; // Apply slide-out animation to day icon
+
+    // Reset night icon animation properties after animation is complete
+    nightIcon.style.animation = "slideInNight 0.3s forwards";
+    setTimeout(() => {
+      dayIcon.style.display = "none"; // Hide day icon after animation is complete
+      nightIcon.style.display = "inline-block";
+      dayIcon.style.animation = ""; // Reset animation properties
+    }, 300);
+  } else {
+    themeStyle.setAttribute("href", "day.css");
+    nightIcon.style.animation = "slideOutNight 0.3s forwards"; // Apply slide-out animation to night icon
+
+    // Reset day icon animation properties after animation is complete
+    dayIcon.style.animation = "slideInDay 0.3s forwards";
+    setTimeout(() => {
+      nightIcon.style.display = "none"; // Hide night icon after animation is complete
+      dayIcon.style.display = "inline-block";
+      nightIcon.style.animation = ""; // Reset animation properties
+    }, 300);
+  }
+}
+
+     
+    </script>
+      <script src="theme.js"></script>
+</body>
+</html>
